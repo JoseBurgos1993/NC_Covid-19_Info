@@ -1,0 +1,33 @@
+header{
+    color: gainsboro;
+    background-color: #82204A;
+    text-align: center;
+    padding: 20px;
+}
+.navbar{
+    color: gainsboro;
+    background-color: violet;
+    text-align: center;
+    margin-top: 10px;
+}
+content{
+    float: left;
+    width:50%;
+}
+aside{
+    float: right;
+}
+footer {
+    /*
+    position: absolute;
+    bottom: 0;
+    */
+    width: 100%;
+    padding: 15px;
+
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-color: teal;
+    color: gainsboro;
+}
