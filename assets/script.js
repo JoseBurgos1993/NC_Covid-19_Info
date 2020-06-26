@@ -19,6 +19,7 @@ $("document").ready(function(){
             if(countyData === null){
                 alert("This county does not exist in North Carolina!");
             } else{
+                
                 /*
                 example of how we would query
 
