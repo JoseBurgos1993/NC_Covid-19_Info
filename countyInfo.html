@@ -21,11 +21,13 @@
         <nav class="uk-navbar-container uk-navbar-transparent " uk-navbar="dropbar: true; dropbar-mode: push">
             <!-- LEFT SIDE OF NAVBAR -->
             <div class="uk-navbar-left">
-                <ul class="uk-navbar-nav">
+                <ul class="uk-navbar-nav uk-visible@l ">
                     <li><a href="index.html">NC INFORMATION</a></li>
                     <li><a href="countyInfo.html">COUNTY INFORMATION</a></li>
                     <li><a href="helpfulLinks.html">HELPFUL LINKS</a></li>
                 </ul>
+                <button class="uk-button uk-button-default uk-margin-small-right uk-hidden@s" type="button"
+                    uk-toggle="target: #offcanvas-nav-primary">Primary Nav</button>
             </div>
 
             <!-- RIGHT SIDE OF NAVBAR -->
@@ -48,9 +50,31 @@
 
         </nav>
 
-        <div class="uk-navbar-dropbar"></div>
 
     </div> <!-- END NAVBAR -->
+
+    <!-- SMALL SCREEN NAVBAR -->
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li class="uk-parent">
+                    <a href="#">Parent</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Sub item</a></li>
+                        <li><a href="#">Sub item</a></li>
+                    </ul>
+                </li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+            </ul>
+
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/script.js"></script>
