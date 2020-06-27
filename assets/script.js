@@ -89,7 +89,7 @@ $("document").ready(function(){
         const queryURL = "https://geo.fcc.gov/api/census/block/find?latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude + "&format=json";
         $.ajax({url: queryURL, method: "GET"}).then(function(response){
             console.log("FCC API");
-            console.log(response);
+            console.log(response.County.name);
         });
     }
 
