@@ -15,64 +15,60 @@
 </head>
 
 <body>
-    <!-- Nav Bar
-    <div>
-        <div class="uk-position-relative ">
-            <img src="images/light.jpg" alt="">
-            <div class="uk-position-top">
-                <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-                    <div class="uk-navbar-left">
-                        <ul class="uk-navbar-nav">
-                            <li class="uk-active"><a href="#">NC INFORMATION</a></li>
-                            <li><a href="#">COUNTY INFORMATION</a></li>
-                            <li><a href="#">HELPFUL LINKS</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
- -->
-    
 
     <div class="uk-position-relative">
         <!-- Nav Bar -->
         <nav class="uk-navbar-container uk-navbar-transparent " uk-navbar="dropbar: true; dropbar-mode: push">
             <!-- LEFT SIDE OF NAVBAR -->
             <div class="uk-navbar-left">
-                <ul class="uk-navbar-nav">
+                <ul class="uk-navbar-nav uk-visible@m">
                     <li><a href="index.html">NC INFORMATION</a></li>
                     <li><a href="countyInfo.html">COUNTY INFORMATION</a></li>
-                    <li><a href="helpfulLinks.html">HELPFUL LINKS</a></li>
+                    <li><a href="helpfulLinks.html">LINKS</a></li>
+                    <li><a href="aboutUs.html">ABOUT US</a></li>
                 </ul>
+                <button class="uk-button uk-button-default uk-margin-small-right uk-hidden@m" type="button"
+                    uk-toggle="target: #offcanvas-nav-primary"><span uk-icon="menu"></span></button>
             </div>
 
             <!-- RIGHT SIDE OF NAVBAR -->
             <div class="uk-navbar-right">
-
-                <ul class="uk-navbar-nav">
-                    <li>
-                        <a href="#">LANGUAGE</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="#">Spanish</a></li>
-                                <li><a href="#">French</a></li>
-                                <li><a href="#">Chinese</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                <button class="uk-button uk-button-default uk-margin-small-right" type="button"
+                    style="color: #f15152;">ESPAÑOL</button>
 
             </div>
 
         </nav>
 
-        <div class="uk-navbar-dropbar"></div>
 
     </div> <!-- END NAVBAR -->
 
+    <!-- SMALL SCREEN NAVBAR -->
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li><a href="index.html"><span class="uk-margin-small-right" uk-icon="icon: world"></span> NC
+                        INFORMATION</a>
+                </li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="countyInfo.html"><span class="uk-margin-small-right" uk-icon="icon: world"></span> COUNTY
+                        INFORMATION</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="helpfulLinks.html"><span class="uk-margin-small-right" uk-icon="icon: link"></span>
+                        LINKS</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="aboutUs.html"><span class="uk-margin-small-right" uk-icon="icon: social"></span> ABOUT
+                        US</a></li>
+            </ul>
+
+        </div>
+    </div> <!-- END SMALL SCREEN NAVBAR -->
+
     <!-- HEADER -->
-    <header> <h1 class="uk-heading-line uk-text-center"><span>Triangle Covid-19 Tracker</span></h1> </header>
+    <header>
+        <h1 class="uk-heading-line uk-text-center"><span>Triangle Covid-19 Tracker</span></h1>
+    </header>
 
     <div>
         <section>
