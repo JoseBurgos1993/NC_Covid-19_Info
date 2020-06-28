@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <div class="uk-position-relative">
         <!-- Nav Bar -->
         <nav class="uk-navbar-container uk-navbar-transparent " uk-navbar="dropbar: true; dropbar-mode: push">
@@ -67,10 +66,10 @@
 
     <!-- HEADER -->
     <header>
-        <h1 class="uk-heading-line uk-text-center"><span>Triangle Covid-19 Tracker</span></h1>
+        <h1 class="uk-heading-line uk-text-center"><span>NC Covid-19 Tracker</span></h1>
     </header>
 
-    <div>
+    <div class="uk-container">
         <section>
             <div uk-grid>
                 <div class="uk-width-1-4">
@@ -98,22 +97,29 @@
         <br>
     </div>
     <!--SLIDESHOW-->
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
-        <ul class="uk-slideshow-items">
-            <li>
-                <img src="assets/images/tips.png" alt="" uk-cover>
-            </li>
-            <li>
-                <img src="assets/images/mask.png" alt="" uk-cover>
-            </li>
-            <li>
-                <img src="assets/images/wash.png" alt="" uk-cover>
-            </li>
-            <li>
-                <img src="assets/images/distance.png" alt="" uk-cover>
-            </li>
-        </ul>
+    <div class="uk-container" id="slideShow">
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-container" tabindex="-1"
+            uk-slideshow="autoplay:  min-height: 300; max-height: 500;">
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="assets/images/mask.png" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="assets/images/tips.png" alt="" uk-cover>
+                </li>
+                <li>
+                    <img src="assets/images/wash.png" alt="" uk-cover>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                uk-slideshow-item="next"></a>
+        </div>
     </div>
+    <!-- FOOTER -->
     <footer>
         <p> &copy; 2020 Dream Team </p>
     </footer>
