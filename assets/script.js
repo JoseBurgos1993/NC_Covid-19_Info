@@ -18,8 +18,11 @@ $("document").ready(function(){
         $.ajax({url: queryURL, method: "GET"}).then(function(response){
             data = JSON.parse(response);
             
+            console.log(name);
+            console.log(name.toLowerCase());
             countyData = getCountyData(name.toLowerCase());
 
+            console.log(countyData);
             if(countyData === null){
                 alert("This county does not exist in North Carolina!");
             } else{
@@ -32,11 +35,14 @@ $("document").ready(function(){
                     */
 
                 } else if(number == 2){ // County
-                    /*
-                    $("#countyName").val(countyData.attributes.County);
-                    $("#countyDeaths").val(countyData.attributes.Deaths);
-                    $("#countyCases").val(countyData.attributes.CountyCases);
-                    */
+                    //$("#countyName").val(countyData.attributes.County);
+                    console.log(countyData.Deaths);
+                    $("#totaldeaths").text(countyData.Deaths);
+                    console.log($("#totaldeaths").text());
+
+                    console.log(countyData.CountyCases);
+                    $("#totalcases").text(countyData.CountyCases);
+                    console.log($("#totalcases").text());
                 }
             }
         });
@@ -57,7 +63,7 @@ $("document").ready(function(){
             const tempCoName = data.features[i].attributes.CONAME.toLowerCase();
             const tempCounty = data.features[i].attributes.County.toLowerCase();
             if(name === tempCoName || name === tempCounty){
-                console.log(data.features[i].attributes);
+                //console.log(data.features[i].attributes);
                 return data.features[i].attributes;
             }
         }
@@ -66,18 +72,31 @@ $("document").ready(function(){
 
 
     // EVENT LISTENERS \\
-    /*
-    $(".submit").on("click", function(){
-        const name = $("#textField").val();
+    
+    $(".search").on("click", function(){
+        const name = $("#searchbar").val();
         runAjax(name,2);
     });
 
-    */
-
+    $(".translator").on("click", function(){
+        if($(this).text() === "ESPAÑOL"){
+            /*
+            Do this for each item needing translation on the page.
+            CHANGE TO ENGLISH
+            $(thing).text("New words");
+            */
+        } else{
+            /*
+            Do this for each item needing translation on the page.
+            CHANGE TO SPANISH
+            $(thing).text("New words");
+            */
+        }
+    });
 
     // MAIN \\
     function main(){
-        getLocation();
+        //getLocation();
 
         //runAjax("Transylvania", 1); // <---- You can type the county name here for testing
     }
