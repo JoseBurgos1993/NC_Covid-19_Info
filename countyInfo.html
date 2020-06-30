@@ -65,6 +65,42 @@
         </div>
     </div> <!-- END SMALL SCREEN NAVBAR -->
 
+    <!--HEADER  -->
+    <header>
+        <h1 class="uk-heading-line uk-text-center"><span>County Information</span></h1>
+    </header>
+
+    <!-- SEARCHBAR -->
+    <div class="uk-container-xsmall uk-align-center">
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+
+                <div class="uk-navbar-item">
+                    <form class="uk-search uk-search-navbar">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Search by County...">
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+    </div> <!-- END SEARCH BAR -->
+
+    <!-- ICONS WITH LIVE INFO -->
+    <section class="uk-column-1-2 uk-column-divider uk-text-center">
+        <h3>TOTAL CASES</h3>
+        <img src="assets/images/virus.svg" width="201px" height="201px uk-img">
+        <p id="totalcases"></p>
+        <h3>TOTAL DEATHS</h3>
+        <img src="assets/images/corpse.svg" width="201px" height="201px uk-img">
+        <p id="totaldeaths"></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="position: absolute; bottom: 0;">
+        <p> &copy; 2020 Dream Team </p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
