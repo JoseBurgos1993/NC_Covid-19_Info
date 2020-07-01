@@ -67,7 +67,7 @@
 
     <!--HEADER  -->
     <header>
-        <h1 class="uk-heading-line uk-text-center"><span>County Information</span></h1>
+        <h1 class="uk-heading-line uk-text-center"><span id="cnty">County Information</span></h1>
     </header>
 
     <!-- SEARCHBAR -->
@@ -90,10 +90,10 @@
 
     <!-- ICONS WITH LIVE INFO -->
     <section class="uk-column-1-2 uk-column-divider uk-text-center">
-        <h3>TOTAL CASES</h3>
+        <h3 id="tc">TOTAL CASES</h3>
         <img src="assets/images/virus.svg" width="201px" height="201px uk-img">
         <p id="totalcases"></p>
-        <h3>TOTAL DEATHS</h3>
+        <h3 id="td">TOTAL DEATHS</h3>
         <img src="assets/images/corpse.svg" width="201px" height="201px uk-img">
         <p id="totaldeaths"></p>
     </section>
@@ -105,6 +105,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/script.js"></script>
+    <script src="assets/translator.js"></script>
 </body>
 
 </html>
