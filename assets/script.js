@@ -19,8 +19,8 @@ $("document").ready(function(){
 
         $.ajax({url: queryURL, method: "GET"}).then(function(response){
             data = JSON.parse(response);
-            //countyData = getCountyData(name.toLowerCase());
-            //console.log(data);
+            countyData = getCountyData(name.toLowerCase());
+            console.log(data);
             if(countyData === null){
                 alert("This county does not exist in North Carolina!");
             } else{
